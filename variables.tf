@@ -38,6 +38,16 @@ variable "container_image" {
   default = "ghcr.io/open-webui/open-webui:main"
 }
 
+variable "container_app_cpu" {
+  type    = number
+  default = 0.5
+}
+
+variable "container_app_memory" {
+  type    = string
+  default = "2Gi"
+}
+
 variable "target_port" {
   type    = number
   default = 8080

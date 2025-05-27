@@ -55,8 +55,8 @@ resource "azurerm_container_app" "app" {
     container {
       name   = "openwebui"
       image  = var.container_image
-      cpu    = 1
-      memory = "2Gi"
+      cpu    = var.container_app_cpu
+      memory = var.container_app_memory
 
       volume_mounts {
         name = "openwebui-volume"
